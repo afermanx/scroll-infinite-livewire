@@ -23,6 +23,11 @@ class UserTable extends Component
         $this->loadAmount += 10;
     }
 
+    public function home()
+    {
+        return redirect()->to(route('home'));
+    }
+
     public function render()
     {
         return view('livewire.user-table')

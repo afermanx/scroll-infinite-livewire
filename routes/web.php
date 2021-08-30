@@ -16,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/users',UserTable::class )->name('users');
-Route::get('/',Home::class );
+Route::get('/',Home::class )->name('home');
 

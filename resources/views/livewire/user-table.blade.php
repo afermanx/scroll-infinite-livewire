@@ -1,6 +1,11 @@
-
 @section('titleNav','Users')
 <div class="container mx-auto  p-10">
+    <div class="container mx-auto  text-center my-auto py-10">
+        <button wire:click.prevent="home"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            Home
+        </button>
+    </div>
     <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -24,56 +29,64 @@
                         </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                       @foreach($users as $user)
-                           <tr @if($loop->last) id="last_record" @endif>
-                               <td class="px-6 py-4 whitespace-nowrap">
-                                   <div class="flex items-center">
-                                       <div class="flex-shrink-0 h-10 w-10">
-                                           <img class="h-10 w-10 rounded-full"
-                                                src="{{asset('images/smiley.png')}}"
-                                                alt="">
-                                       </div>
-                                       <div class="ml-4">
-                                           <div class="text-sm font-medium text-gray-900">
-                                               {{$user->name}}
-                                           </div>
+                        @foreach($users as $user)
+                            <tr @if($loop->last) id="last_record" @endif>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10">
+                                            <img class="h-10 w-10 rounded-full"
+                                                 src="{{asset('images/smiley.png')}}"
+                                                 alt="">
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">
+                                                {{$user->name}}
+                                            </div>
 
-                                       </div>
-                                   </div>
-                               </td>
-                               <td class="px-6 py-4 whitespace-nowrap">
-                                   <div class="text-sm text-gray-900"> {{$user->email}}</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900"> {{$user->email}}</div>
 
-                               </td>
-                               <td class="px-6 py-4 whitespace-nowrap">
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
                 <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                    {{$user->created_at->diffForHumans()}}
                 </span></td>
 
-                           </tr>
-                       @endforeach
+                            </tr>
+                        @endforeach
 
                         <!-- More people... -->
                         </tbody>
                     </table>
+                    <div wire:loading.delay>
+                        <div class="w-full h-full fixed block top-0 left-0 bg-white opacity-75 z-50">
+                      <span class="text-green-500 opacity-75 top-1/2 my-0 mx-auto block relative w-0 h-0"
+                            style="top: 50%;">
+                        <i class="fas fa-circle-notch fa-spin fa-5x"></i>
+                      </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         @if($loadAmount >= $totalRecords)
-            <p class="text-red-800 font-bold text-2xl text-center my-10" >No Remaining Records!</p>
+            <p class="text-red-800 font-bold text-2xl text-center my-10">No Remaining Records!</p>
         @endif
 
         <script>
             const lastRecord = document.getElementById('last_record')
             const options = {
-                root:null,
-                threshold:1,
-                rootMargin:'0px'
+                root: null,
+                threshold: 1,
+                rootMargin: '0px'
             }
-            const observer =  new IntersectionObserver((entries, observer)=>{
+            const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                    if(entry.isIntersecting){
-                        @this.loadMore()
+                    if (entry.isIntersecting) {
+                    @this.loadMore()
                     }
                 })
             })
