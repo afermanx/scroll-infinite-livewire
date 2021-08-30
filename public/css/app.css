@@ -31863,22 +31863,6 @@ video {
   transition-duration: 1000ms;
 }
 
-.ease-linear {
-  transition-timing-function: linear;
-}
-
-.ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -63087,22 +63071,6 @@ video {
 
   .sm\:duration-1000 {
     transition-duration: 1000ms;
-  }
-
-  .sm\:ease-linear {
-    transition-timing-function: linear;
-  }
-
-  .sm\:ease-in {
-    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-  }
-
-  .sm\:ease-out {
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-
-  .sm\:ease-in-out {
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -94315,22 +94283,6 @@ video {
   .md\:duration-1000 {
     transition-duration: 1000ms;
   }
-
-  .md\:ease-linear {
-    transition-timing-function: linear;
-  }
-
-  .md\:ease-in {
-    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-  }
-
-  .md\:ease-out {
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-
-  .md\:ease-in-out {
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
 }
 
 @media (min-width: 1024px) {
@@ -125541,22 +125493,6 @@ video {
 
   .lg\:duration-1000 {
     transition-duration: 1000ms;
-  }
-
-  .lg\:ease-linear {
-    transition-timing-function: linear;
-  }
-
-  .lg\:ease-in {
-    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-  }
-
-  .lg\:ease-out {
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-
-  .lg\:ease-in-out {
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -156769,22 +156705,6 @@ video {
   .xl\:duration-1000 {
     transition-duration: 1000ms;
   }
-
-  .xl\:ease-linear {
-    transition-timing-function: linear;
-  }
-
-  .xl\:ease-in {
-    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-  }
-
-  .xl\:ease-out {
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-
-  .xl\:ease-in-out {
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
 }
 
 @media (min-width: 1536px) {
@@ -187995,22 +187915,6 @@ video {
 
   .\32xl\:duration-1000 {
     transition-duration: 1000ms;
-  }
-
-  .\32xl\:ease-linear {
-    transition-timing-function: linear;
-  }
-
-  .\32xl\:ease-in {
-    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-  }
-
-  .\32xl\:ease-out {
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-
-  .\32xl\:ease-in-out {
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 

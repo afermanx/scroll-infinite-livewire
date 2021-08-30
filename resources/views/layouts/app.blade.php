@@ -23,7 +23,7 @@
 
             <nav class="hidden md:flex space-x-10">
 
-                <h1 class="mx-auto text-3xl">USERS</h1>
+                <h1 class="mx-auto text-3xl">@yield('titleNav')</h1>
 
 
             </nav>
@@ -37,9 +37,9 @@
         </div>
     </div>
 
-    <div class="container mx-auto">
+
         {{ $slot }}
-    </div>
+
     @livewireScripts
 </body>
 </html>

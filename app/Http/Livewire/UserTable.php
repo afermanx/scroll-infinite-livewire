@@ -11,7 +11,7 @@ class UserTable extends Component
     // Total number of User records within database.
     public $totalRecords;
     //the number of records to load per scroll event.
-    public $loadAmount = 10;
+    public $loadAmount = 20;
 
 
     public function mount(){
@@ -27,6 +27,8 @@ class UserTable extends Component
     {
         return view('livewire.user-table')
             ->with('users', User::limit($this->loadAmount)->get()
+
+
             );
     }
 }

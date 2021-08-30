@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Home;
 use App\Http\Livewire\UserTable;
 use Illuminate\Support\Facades\Route;
 
@@ -14,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',UserTable::class );
+Route::get('/users',UserTable::class )->name('users');
+Route::get('/',Home::class );
 
