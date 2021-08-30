@@ -8,7 +8,7 @@ Project made using laravel, livewire and tailwind CSS and a little js, infinite 
 - clone the repo;
 - run composer install && npm i;
 - configure .env for your database;
-- run the command: php artisan migrate --seed
-- start the project with php artisan serve
-#####That simple! 😃
+- run the command: php artisan migrate --seed;
+- start the project with php artisan serve.
+That simple! 😃
 
